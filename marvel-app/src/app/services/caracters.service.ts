@@ -17,7 +17,7 @@ export class CharactersApiService {
     return this.http.get<any>(this.URL_API)
   }
 
-  getCharachter(name: string): Observable<any> {
-    return this.http.post<any>(this.URL_API, name)
+  getCarachter(name: string) {
+    return this.http.get<any>(this.URL_API+"&nameStartsWith="+`${name}`)
   }
 }

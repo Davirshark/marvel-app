@@ -1,21 +1,28 @@
+<form [formGroup]="form" >
+<mat-form-field appearance="outline" style="margin-top: 20px; margin-left: 20px;">
+    <mat-label>Pesquisar um herói</mat-label>
+    <input matInput formControlName = "nome">
+</mat-form-field>
+<button (click) = "enviar()">enviar</button>
+<button (click) = "todos()">todos</button>
+</form>
 <div style="display: flex; flex-wrap: wrap;">
-<ng-container *ngIf="ok == true">
-    <div *ngFor="let  personagem of personagens">
-        <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>{{personagem.name}}</mat-card-title>
-              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src = "{{personagem.thumbnail.path}}.{{personagem.thumbnail.extension}}"
-            alt="Photo of character">
-            <mat-card-content>
-              <p>
-                {{personagem.description}}
-              </p>
-            </mat-card-content>
-          </mat-card>
-    </div>
-   
-</ng-container>
+    <ng-container *ngIf="ok == true">
+        <div *ngFor="let  personagem of personagens">
+            <mat-card class="example-card" style="margin-left: 50px; margin-bottom: 20px">
+                <mat-card-header>
+                  <mat-card-title>{{personagem.name}}</mat-card-title>
+                  <mat-card-subtitle>Marvel's character</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src = "{{personagem.thumbnail.path}}.{{personagem.thumbnail.extension}}"
+                alt="Photo of character">
+                <mat-card-content>
+                  <p>
+                    {{personagem.description}}
+                  </p>
+                </mat-card-content>
+              </mat-card>
+        </div>
+       
+    </ng-container>
 </div>
