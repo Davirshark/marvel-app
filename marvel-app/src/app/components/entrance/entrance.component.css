@@ -10,3 +10,14 @@
     background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fimgbin.com%2Fpng%2FZm8hCV4u%2Fmarvel-icon-cinema-and-tv-icon-png&psig=AOvVaw1TLuBHbeXAebv7vSebkiDl&ust=1650046441213000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOC565SUlPcCFQAAAAAdAAAAABAO");
     background-size: cover;
   }
+
+  button:disabled {
+    background-color: gray;
+    color: white;
+  }
+
+  button {
+    margin-left: 20px; 
+    background-color: red; 
+    color: white;
+  }
